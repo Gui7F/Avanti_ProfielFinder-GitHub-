@@ -5,9 +5,9 @@ function App() {
 
   return (
     <main className="flex items-center justify-center min-h-screen">
-      <div className="w-[1440px] h-[810px] bg-[#1F1F1F] flex items-center justify-center relative overflow-hidden">
+      <div className="2xl:w-[1440px] 2xl:h-[810px] max-[480px]:w-[95%] h-full bg-[#1F1F1F] 2xl:flex items-center justify-center relative overflow-hidden">
         {/* Bolinhas */}
-        <div className='absolute top-[30px] left-[70px] z-10'>
+        <div className='absolute top-[30px] left-[70px] z-10 max-[480px]:hidden'>
           <svg width="239" height="225" viewBox="0 0 239 225" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_22_3234)">
               <path d="M3.11247 6.20301C4.83144 6.20301 6.22494 4.81442 6.22494 3.1015C6.22494 1.38859 4.83144 0 3.11247 0C1.3935 0 0 1.38859 0 3.1015C0 4.81442 1.3935 6.20301 3.11247 6.20301Z" fill="#272727" />
@@ -309,7 +309,7 @@ function App() {
         </div>
         {/* Bolinhas */}
         {/* Luz a direita */}
-        <div className='absolute top-[-100px] right-[-70px]'>
+        <div className='absolute top-[-100px] right-[-70px] max-[480px]:hidden'>
           <svg width="888" height="888" viewBox="0 0 634 620" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="444" cy="176" r="444" fill="url(#paint0_radial_22_3198)" />
             <defs>
@@ -321,7 +321,7 @@ function App() {
           </svg>
         </div>
         {/* Luz a direita */}
-        <div className='absolute left-0 top-[150px]'>
+        <div className='absolute left-0 top-[150px] max-[480px]:hidden'>
           <svg width="259" height="612" viewBox="0 0 259 612" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="-78" cy="337" r="337" fill="url(#paint0_radial_22_3226)" />
             <defs>
@@ -332,13 +332,13 @@ function App() {
             </defs>
           </svg>
         </div>
-        <div className="w-[1156px] h-[537px] bg-black z-50">
+        <div className="2xl:w-[1156px] 2xl:h-[537px] max-[480px]:h-screen  bg-black z-50">
           {/* Title */}
-          <div className='w-[450px] h-[82px] flex justify-center items-center m-auto pt-20'>
+          <div className='2xl:w-[450px] 2xl:h-[82px] h-[90px] flex justify-center items-center m-auto pt-20'>
             <div className='w-[58px] h-[58px]'>
               <img className='object-cover h-full w-full' src="./github_icon.png" alt="" />
             </div>
-            <h1 className='font-nunito font-semibold text-[60px] text-white text-nowrap'>Perfil <span className='font-extrabold'>GitHub</span></h1>
+            <h1 className='font-nunito font-semibold 2xl:text-[60px] text-[30px]  text-white text-nowrap'>Perfil <span className='font-extrabold'>GitHub</span></h1>
           </div>
           {/* Title */}
         <FinderProfiel/>

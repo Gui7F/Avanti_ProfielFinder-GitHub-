@@ -20,7 +20,7 @@ function FinderProfiel() {
   return (
     <div >
 
-      <div className='w-[503px] h-[62px] m-auto relative mt-[70px]'>
+      <div className='2xl:w-[503px] 2xl:h-[62px] w-[80%] h-[40px] m-auto relative mt-[70px]'>
         <input
           className='w-full h-full placeholder:text-black placeholder:text-[20px] font-nunito font-semibold rounded-md pl-4 pr-16'
           type="text"
@@ -41,14 +41,20 @@ function FinderProfiel() {
       </p></div>}
 
       {userData && (
-        <div style={{ marginTop: "2rem" }} className="w-[804px] h-[257px] bg-[#D9D9D9] rounded-3xl flex items-center m-auto">
-          <div className="w-[700px] h-auto flex items-center m-auto">
-            <div className="w-[220px] h-[220px] border-[2px] border-[#005CFF] rounded-full overflow-hidden">
-              <img className="object-cover h-full w-full" src={userData.avatarUrl} alt="Avatar" width={120} />
+        <div style={{ marginTop: "2rem" }} className="2xl:w-[804px] 2xl:h-[257px] w-[95%] h-auto  bg-[#D9D9D9] rounded-3xl 2xl:flexitems-center m-auto max-[480px]:py-6">
+          <div className="2xl:w-[700px] w-[95%] h-auto 2xl:flex items-center m-auto">
+            <div className="w-56 h-56 max-[480px]:m-auto">
+                <div className=" border-[2px] border-[#005CFF] rounded-full overflow-hidden flex items-center justify-center">
+                  <img
+                    className="w-full h-full object-cover"
+                    src={userData.avatarUrl}
+                    alt="Avatar"
+                  />
+                </div>
             </div>
-            <div className="font-nunito mb-10 ml-6">
-              <h2 className=" font-bold text-[20px] text-[#005CFF] mb-5">{userData.name || "Sem nome público"}</h2>
-              <p className="font-light text-[15px] lead">{userData.bio || "Sem bio disponível"}</p>
+            <div className="font-nunito 2xl:mb-10 2xl:ml-6">
+              <h2 className=" font-bold text-[20px] text-[#005CFF] mb-5 max-[480px]:text-center">{userData.name || "Sem nome público"}</h2>
+              <p className="font-light text-[15px] lead max-[480px]:text-center max-[480px]:w-[95%] max-[480px]:m-auto">{userData.bio || "Sem bio disponível"}</p>
             </div>
           </div>
         </div>
