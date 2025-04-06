@@ -134,8 +134,8 @@ function FinderProfiel() {
           className="2xl:w-[804px] 2xl:h-[257px] w-[95%] h-auto  bg-[#D9D9D9] rounded-3xl 2xl:flex items-center m-auto max-[480px]:py-6"
         >
           <div className="2xl:w-[700px] w-[95%] h-auto 2xl:flex items-center m-auto">
-            <div className="max-[480px]:w-56 max-[480px]:h-56 max-[480px]:m-auto">
-              <div className=" border-[2px] border-[#005CFF] rounded-full overflow-hidden flex items-center justify-center">
+            <div className=" max-[480px]:m-auto">
+              <div className="w-56 h-56 border-[2px] border-[#005CFF] rounded-full overflow-hidden flex items-center justify-center">
                 <img
                   className="w-full h-full object-cover"
                   src={userData.avatarUrl}
