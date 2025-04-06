@@ -11,6 +11,8 @@ function FinderProfiel() {
   const handleSearch = async () => {
     try {
       setLoading(true);
+      setError("");
+      setIsButtonDisabled(true);
       const data = await fetchGitHubUser(username);
       setUserData(data);
     } catch (e) {
@@ -18,6 +20,12 @@ function FinderProfiel() {
     }
     setLoading(false);
     setIsButtonDisabled(false);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.keyCode === 13) {
+      handleSearch();
+    }
   };
 
   return (
@@ -28,6 +36,7 @@ function FinderProfiel() {
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          onKeyDown={handleKeyDown}
           placeholder="Digite um usuário do Github"
         />
         {loading && (
@@ -91,6 +100,7 @@ function FinderProfiel() {
         {!loading && (
           <button
             onClick={handleSearch}
+            disabled={isButtonDisabled}
             className="absolute bg-[#005CFF] h-full w-[62px] rounded-md top-0 right-0 flex items-center justify-center"
           >
             <svg
@@ -147,5 +157,4 @@ function FinderProfiel() {
     </div>
   );
 }
-
 export default FinderProfiel;
