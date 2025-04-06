@@ -40,7 +40,6 @@ Abaixo estão capturas de tela demonstrando a responsividade da aplicação:
 
 ![Avanti Finder - Mobile](./screenshots/mobile.png)
 
-> *(Adicione as imagens na pasta `screenshots` ou ajuste os caminhos conforme necessário.)*
 
 ## Considerações
 
