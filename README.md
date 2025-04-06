@@ -13,9 +13,7 @@ Criar uma interface moderna e funcional que consome a API pública do GitHub par
 - Exibição de dados como:
   - Nome
   - Bio
-  - Número de repositórios públicos
-  - Seguidores / Seguindo
-  - Link para o perfil
+  - Foto Avatar
 - Interface responsiva para mobile, tablet e desktop.
 
 ## Tecnologias Utilizadas
