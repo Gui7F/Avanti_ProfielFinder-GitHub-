@@ -120,7 +120,7 @@ function FinderProfiel() {
       </div>
 
       {error && (
-        <div className="bg-[#D9D9D9] mt-10 w-[710px] h-[88px] font-nunito font-normal text-[20px] text-[#FF0000] text-center m-auto rounded-3xl flex items-center justify-center">
+        <div className="bg-[#D9D9D9] mt-10 p-2 2xl:w-[710px] w-[95%] h-[88px] font-nunito font-normal 2xl:text-[20px] text-[16px] text-[#FF0000] text-center m-auto rounded-3xl flex items-center justify-center">
           <p className="w-[497px] h-[47px]">
             Nenhum perfil foi encontrado com esse nome de usuário. Tente
             novamente
@@ -134,8 +134,8 @@ function FinderProfiel() {
           className="2xl:w-[804px] 2xl:h-[257px] w-[95%] h-auto  bg-[#D9D9D9] rounded-3xl 2xl:flex items-center m-auto max-[480px]:py-6"
         >
           <div className="2xl:w-[700px] w-[95%] h-auto 2xl:flex items-center m-auto">
-            <div className=" max-[480px]:m-auto">
-              <div className="w-56 h-56 border-[2px] border-[#005CFF] rounded-full overflow-hidden flex items-center justify-center">
+            <div className="max-[480px]:m-auto">
+              <div className="w-56 h-56 border-[2px] border-[#005CFF] rounded-full overflow-hidden flex items-center justify-center m-auto">
                 <img
                   className="w-full h-full object-cover"
                   src={userData.avatarUrl}
@@ -145,10 +145,10 @@ function FinderProfiel() {
             </div>
             <div className="font-nunito 2xl:mb-10 2xl:ml-6">
               <h2 className=" font-bold text-[20px] text-[#005CFF] mb-5 max-[480px]:text-center">
-                {userData.name || "Sem nome público"}
+                {userData.name}
               </h2>
               <p className="font-light text-[15px] lead max-[480px]:text-center max-[480px]:w-[95%] max-[480px]:m-auto">
-                {userData.bio || "Sem bio disponível"}
+                {userData.bio}
               </p>
             </div>
           </div>
