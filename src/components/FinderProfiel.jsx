@@ -9,18 +9,22 @@ function FinderProfiel() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const handleSearch = async () => {
+    setLoading(true);
+    setIsButtonDisabled(true);
+  
     try {
-      setLoading(true);
-      setError("");
-      setIsButtonDisabled(true);
       const data = await fetchGitHubUser(username);
       setUserData(data);
+      setError(""); 
     } catch (e) {
-      setError(e.message);
+      setUserData(null); 
+      setError("Nenhum perfil foi encontrado com esse nome de usuário. Tente novamente");
     }
+  
     setLoading(false);
     setIsButtonDisabled(false);
   };
+  
 
   const handleKeyDown = (event) => {
     if (event.keyCode === 13) {
