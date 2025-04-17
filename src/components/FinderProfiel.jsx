@@ -30,9 +30,9 @@ function FinderProfiel() {
 
   return (
     <div>
-      <div className="2xl:w-[503px] 2xl:h-[62px] w-[80%] h-[40px] m-auto relative mt-[70px]">
+      <div className="2xl:w-[35%] 2xl:h-[70px] lg:w-[53%] lg:h-[50px] w-[95%] h-[40px] m-auto relative mt-[70px]">
         <input
-          className="w-full h-full placeholder:text-black 2xl:placeholder:text-[20px] font-nunito font-semibold rounded-md pl-4 pr-16"
+          className="w-full h-full placeholder:text-black 2xl:placeholder:text-[23px] 2xl:text-[23px] lg:text-[18px] font-nunito font-semibold rounded-md pl-4 pr-16"
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -101,11 +101,10 @@ function FinderProfiel() {
           <button
             onClick={handleSearch}
             disabled={isButtonDisabled}
-            className="absolute bg-[#005CFF] h-full w-[62px] rounded-md top-0 right-0 flex items-center justify-center"
+            className="absolute bg-[#005CFF] h-full 2xl:w-[72px] lg:w-[60px] w-[55px] rounded-md top-0 right-0 flex items-center justify-center"
           >
             <svg
-              width="25"
-              height="25"
+              className="2xl:w-[30px] 2xl:h-[30px] lg:w-[25px] lg:h-[25px] w-[20px] h-[20px]"
               viewBox="0 0 25 25"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +119,7 @@ function FinderProfiel() {
       </div>
 
       {error && (
-        <div className="bg-[#D9D9D9] mt-10 p-2 2xl:w-[710px] w-[95%] h-[88px] font-nunito font-normal 2xl:text-[20px] text-[16px] text-[#FF0000] text-center m-auto rounded-3xl flex items-center justify-center">
+        <div className="bg-[#D9D9D9] mt-10 p-2 2xl:w-[45%] lg:w-[70%] w-[95%] h-[88px] font-nunito font-normal 2xl:text-[22px] lg:text-[18px] text-[16px] text-[#FF0000] text-center m-auto rounded-3xl flex items-center justify-center leading-6">
           <p className="w-[497px] h-[47px]">
             Nenhum perfil foi encontrado com esse nome de usuário. Tente
             novamente
@@ -130,12 +129,11 @@ function FinderProfiel() {
 
       {userData && (
         <div
-          style={{ marginTop: "2rem" }}
-          className="2xl:w-[804px] 2xl:h-[257px] w-[95%] h-auto  bg-[#D9D9D9] rounded-3xl 2xl:flex items-center m-auto max-[480px]:py-6"
+          className="2xl:w-[52%] 2xl:h-[300px] lg:w-[70%] lg:h-[200px] w-[95%] h-auto  bg-[#D9D9D9] rounded-3xl 2xl:flex md:flex items-center justify-around m-auto px-10 max-[480px]:py-6 mt-10"
         >
-          <div className="2xl:w-[700px] w-[95%] h-auto 2xl:flex items-center m-auto">
+          <div className="w-full max-[500px]:w-[95%] h-auto 2xl:flex lg:flex items-center">
             <div className="max-[480px]:m-auto">
-              <div className="w-56 h-56 border-[2px] border-[#005CFF] rounded-full overflow-hidden flex items-center justify-center m-auto">
+              <div className="2xl:w-64 2xl:h-64 lg:w-40 lg:h-40 w-40 h-40 2xl:border-[3px] border-[2px] border-[#005CFF] rounded-full overflow-hidden flex items-center justify-center m-auto">
                 <img
                   className="w-full h-full object-cover"
                   src={userData.avatarUrl}
@@ -143,11 +141,11 @@ function FinderProfiel() {
                 />
               </div>
             </div>
-            <div className="font-nunito 2xl:mb-10 2xl:ml-6">
-              <h2 className=" font-bold text-[20px] text-[#005CFF] mb-5 max-[480px]:text-center">
+            <div className="font-nunito 2xl:mb-10 2xl:ml-6 lg:ml-4">
+              <h2 className=" font-bold 2xl:text-[25px] text-[20px] text-[#005CFF] 2xl:mb-5 mb-3 max-[480px]:text-center">
                 {userData.name}
               </h2>
-              <p className="font-light text-[15px] lead max-[480px]:text-center max-[480px]:w-[95%] max-[480px]:m-auto">
+              <p className="font-light 2xl:text-[20px] text-[16px] max-[480px]:text-center max-[480px]:w-[98%] max-[480px]:m-auto">
                 {userData.bio}
               </p>
             </div>

@@ -3,12 +3,11 @@ import FinderProfiel from './components/FinderProfiel.jsx'
 
 function App() {
 
-  return (
-    <main className="flex items-center justify-center min-h-screen">
-      <div className="2xl:w-[1440px] 2xl:h-[810px] max-[480px]:w-[95%] h-full bg-[#1F1F1F] 2xl:flex items-center justify-center relative overflow-hidden">
+  return (  
+    <main className="w-full h-screen bg-[#1F1F1F] flex items-center justify-center relative overflow-hidden">
         {/* Bolinhas */}
-        <div className='absolute top-[30px] left-[70px] z-10 max-[480px]:hidden'>
-          <svg width="239" height="225" viewBox="0 0 239 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className='absolute top-[5%] left-[5%] w-[clamp(100px,15vw,320px)] h-[clamp(100px,15vw,320px)] z-10 max-[480px]:hidden'>
+          <svg viewBox="0 0 239 225" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_22_3234)">
               <path d="M3.11247 6.20301C4.83144 6.20301 6.22494 4.81442 6.22494 3.1015C6.22494 1.38859 4.83144 0 3.11247 0C1.3935 0 0 1.38859 0 3.1015C0 4.81442 1.3935 6.20301 3.11247 6.20301Z" fill="#272727" />
               <path d="M17.66 6.20301C19.3789 6.20301 20.7724 4.81442 20.7724 3.1015C20.7724 1.38859 19.3789 0 17.66 0C15.941 0 14.5475 1.38859 14.5475 3.1015C14.5475 4.81442 15.941 6.20301 17.66 6.20301Z" fill="#272727" />
@@ -309,8 +308,8 @@ function App() {
         </div>
         {/* Bolinhas */}
         {/* Luz a direita */}
-        <div className='absolute top-[-100px] right-[-70px] max-[480px]:hidden'>
-          <svg width="888" height="888" viewBox="0 0 634 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className='absolute 2xl:top-[-19%] lg:top-[-22%] 2xl:right-[-10%] lg:right-[-15%] max-[480px]:hidden 2xl:w-[1000px] 2xl:h-[1000px] lg:w-[700px] lg:h-[700px]'>
+          <svg className='w-full h-full' viewBox="0 0 634 620" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="444" cy="176" r="444" fill="url(#paint0_radial_22_3198)" />
             <defs>
               <radialGradient id="paint0_radial_22_3198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(444 176) rotate(90) scale(444)">
@@ -321,8 +320,9 @@ function App() {
           </svg>
         </div>
         {/* Luz a direita */}
-        <div className='absolute left-0 top-[150px] max-[480px]:hidden'>
-          <svg width="259" height="612" viewBox="0 0 259 612" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Luz a esquerda */}
+        <div className='absolute 2xl:left-[-12%] lg:left-[-5%] bottom-[-1%] 2xl:w-[1000px]  2xl:h-[1000px] max-[480px]:hidden'>
+          <svg className='w-full h-full' viewBox="0 0 259 612" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="-78" cy="337" r="337" fill="url(#paint0_radial_22_3226)" />
             <defs>
               <radialGradient id="paint0_radial_22_3226" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-78 337) rotate(90) scale(337)">
@@ -332,16 +332,18 @@ function App() {
             </defs>
           </svg>
         </div>
-        <div className="2xl:w-[1156px] 2xl:h-[537px] max-[480px]:h-screen  bg-black z-50">
+        {/* Luz a esquerda */}
+       <div className='flex items-center justify-center w-[80%] h-[70%] max-[500px]:w-full max-[500px]:h-full m-auto'>
+        <div className="w-full h-full bg-black z-50">
           {/* Title */}
-          <div className='2xl:w-[450px] 2xl:h-[82px] h-[90px] flex justify-center items-center m-auto pt-20'>
-            <div className='w-[58px] h-[58px]'>
+          <div className='2xl:w-full 2xl:h-[100px] h-[90px] flex justify-center items-center m-auto pt-20'>
+            <div className='2xl:w-[70px] 2xl:h-[70px] lg:w-[55px] lg:h-[55px] w-[50px] h-[50px]  mr-3'>
               <img className='object-cover h-full w-full' src="./github_icon.png" alt="" />
             </div>
-            <h1 className='font-nunito font-semibold 2xl:text-[60px] text-[30px]  text-white text-nowrap'>Perfil <span className='font-extrabold'>GitHub</span></h1>
+            <h1 className='font-nunito font-semibold 2xl:text-[80px] lg:text-[60px] text-[40px]  text-white text-nowrap'>Perfil <span className='font-bold font-sans'>GitHub</span></h1>
           </div>
           {/* Title */}
-        <FinderProfiel/>
+         <FinderProfiel/>
         </div>
       </div>
     </main>
