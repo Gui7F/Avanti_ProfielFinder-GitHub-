@@ -34,11 +34,11 @@ Abaixo estão capturas de tela demonstrando a responsividade da aplicação:
 
 ### Desktop
 
-![Avanti Finder - Desktop](./screenshots/desktop.png)
+![Avanti Finder - Desktop](./src/screenshots/desktop.png)
 
 ### Mobile
 
-![Avanti Finder - Mobile](./screenshots/mobile.png)
+![Avanti Finder - Mobile](./src/screenshots/mobile.png)
 
 
 ## Considerações
